@@ -11,11 +11,7 @@ class CountryListViewModel : ViewModel() {
 
     val countryListItems = ObservableArrayList<CountryListItem>()
 
-    init {
-        loadCountryList()
-    }
-
-    private fun loadCountryList() {
+    fun loadCountryList() {
         // add items here
         // for databinding scope, I am loading hard coded couple of values
 
