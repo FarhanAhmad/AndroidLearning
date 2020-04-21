@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AndroidLearning</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="country_list_label">Country List</string>
+    <string name="country_details_label">Country Details</string>
+</resources>
