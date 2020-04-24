@@ -56,6 +56,20 @@ dependencies {
     // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
+    // OKHttp3
+    implementation("com.squareup.okhttp3:okhttp:4.5.0")
+    // OKHttp3 testing
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.5.0")
+
+    // Koin for Android
+    implementation "org.koin:koin-android:$koin_version"
+    // or Koin for view model features
+    implementation "org.koin:koin-android-viewmodel:$koin_version"
+    // Koin for Unit tests
+    testImplementation "org.koin:koin-test:$koin_version"
+
+    implementation 'com.google.code.gson:gson:2.8.6'
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.2.0'

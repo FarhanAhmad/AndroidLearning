@@ -5,16 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.black.androidlearning.databinding.FragmentCountryListBinding
 import com.black.androidlearning.ui.adapters.CountryListAdapter
 import com.black.androidlearning.viewmodel.CountryListViewModel
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class CountryListFragment : Fragment() {
 
-    private var viewModel: CountryListViewModel? = null
+    private val viewModel by viewModel<CountryListViewModel>()
     private var viewDataBinding: FragmentCountryListBinding? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -24,8 +23,6 @@ class CountryListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel = ViewModelProvider(this).get(CountryListViewModel::class.java)
 
         viewDataBinding?.apply {
             rvCountryList.adapter = CountryListAdapter()
