@@ -13,8 +13,9 @@ import com.bumptech.glide.Glide
  */
 
 @BindingAdapter("app:countryItems")
-fun setCountryItems(rv: RecyclerView, list: List<CountryListItem>?) {
-    (rv.adapter as CountryListAdapter).submitList(list)
+fun setCountryItems(rv: RecyclerView, list: List<CountryListItem>) {
+
+    (rv.adapter as CountryListAdapter).submitList(list.toList())
 }
 
 @BindingAdapter("app:imageUrl")
