@@ -10,7 +10,7 @@ import com.black.androidlearning.model.CountryDTO
  */
 class AppRepo(private val networkSource: INetworkSource) {
 
-    suspend fun getCountryList(): List<CountryDTO> {
+    suspend fun getCountryList(): List<CountryDTO>? {
         /**
          * Can add further functionality here, like get data from localSource in future.
          */

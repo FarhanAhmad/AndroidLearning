@@ -13,7 +13,7 @@ import java.lang.reflect.Type
  */
 class NetworkDataSource(private val httpClient: OkHttpClient):INetworkSource {
 
-    override suspend fun getCountryList(): List<CountryDTO> {
+    override suspend fun getCountryList(): List<CountryDTO>? {
 
         val request = Request.Builder()
                 .url(Urls.countryListUrl)

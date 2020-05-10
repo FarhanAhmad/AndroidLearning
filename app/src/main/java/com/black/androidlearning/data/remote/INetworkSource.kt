@@ -7,5 +7,5 @@ import com.black.androidlearning.model.CountryDTO
  */
 interface INetworkSource {
 
-    suspend fun getCountryList():List<CountryDTO>
+    suspend fun getCountryList():List<CountryDTO>?
 }

@@ -33,9 +33,11 @@ class CountryListViewModel(private val appRepo: AppRepo) : ViewModel() {
             val countryListUseCase = GetCountryListUseCase(appRepo)
             val list = countryListUseCase.execute()
 
-            Logger.i(TAG, "Received country list:${list.size}")
+            Logger.i(TAG, "Received country list:${list?.size}")
             launch(Dispatchers.Main) {
-                countryListItems.addAll(list)
+                list?.let {
+                    countryListItems.addAll(it)
+                }
             }
 
         }

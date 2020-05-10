@@ -15,9 +15,9 @@ class GetCountryListUseCase(val appRepo: AppRepo) {
     /**
      * Get the data from remote source, transfer into object need to show on UI
      */
-    suspend fun execute(): List<CountryListItem> {
+    suspend fun execute(): List<CountryListItem>? {
 
-        return appRepo.getCountryList().map {
+        return appRepo.getCountryList()?.map {
             CountryListItem(it.name, it.capital, it.population, it.flag)
         }
     }
