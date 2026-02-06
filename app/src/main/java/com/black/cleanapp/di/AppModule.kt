@@ -1,6 +1,6 @@
 package com.black.cleanapp.di
 
-import com.black.cleanapp.data.DefaultAppRepository
+import com.black.cleanapp.data.repository.DefaultAppRepository
 import com.black.cleanapp.domain.repository.AppRepo
 import dagger.Binds
 import dagger.Module

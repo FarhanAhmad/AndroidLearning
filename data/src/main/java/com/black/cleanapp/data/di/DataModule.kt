@@ -1,5 +1,6 @@
-package com.black.cleanapp.data
+package com.black.cleanapp.data.di
 
+import com.black.cleanapp.data.remote.CountriesNetworkService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,5 +1,6 @@
-package com.black.cleanapp.data
+package com.black.cleanapp.data.remote
 
+import com.black.cleanapp.data.model.CountryDTO
 import retrofit2.http.GET
 
 interface CountriesNetworkService {

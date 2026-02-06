@@ -1,12 +1,12 @@
-package com.black.cleanapp.data;
+package com.black.cleanapp.data.model
 
 import com.google.gson.annotations.SerializedName
 
 data class CountryDTO(
     @SerializedName("name")
-    val name: CountryName?,
+    val name: CountryName? = null,
     @SerializedName("flags")
-    val flag: CountryFlag?,
+    val flag: CountryFlag? = null,
 )
 
 data class CountryName(
